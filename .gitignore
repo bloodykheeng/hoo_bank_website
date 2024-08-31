@@ -14,9 +14,11 @@ package-lock.json
 /build
 /idea
 /.idea
+/dist
 
 # Ignore build.zip
 build.zip
+dist.zip
 
 # misc
 .DS_Store
