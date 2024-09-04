@@ -1,11 +1,11 @@
-import { features } from "../constants";
+import { services } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
-import FeatureCard from "./FeatureCard";
+import ServicesCard from "./ServicesCard";
 
 const Business = () => {
   return (
-    <section id="features" className={layout.section}>
+    <section id="services" className={layout.section}>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
           You focus on your needs, we’ll handle the rest.
@@ -20,8 +20,8 @@ const Business = () => {
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>
-        {features.map((feature, index) => (
-          <FeatureCard key={feature.id} {...feature} index={index} />
+        {services.map((feature, index) => (
+          <ServicesCard key={feature.id} {...feature} index={index} />
         ))}
       </div>
     </section>

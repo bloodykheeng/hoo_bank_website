@@ -4,6 +4,7 @@ import { discount, robot } from "../assets";
 import gasNoBg from "../assets/elevate-pesa/blue_gas-removebg-preview.png";
 import gasJarsNoBg from "../assets/elevate-pesa/3d-rendering-gas-cylinder-removebg-preview.png";
 import GetStarted from "./GetStarted";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -42,6 +43,25 @@ const Hero = () => {
           Download our app on Apple and Google Play for easy ordering and
           tracking.
         </p>
+
+        <div className="flex flex-row mt-6 space-x-4">
+          <a
+            href="tel:+256751523232"
+            className="flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 rounded-lg p-3"
+          >
+            <FaPhoneAlt className="mr-2" />
+            Call Us
+          </a>
+          <a
+            href="https://wa.me/256751523232"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center text-white bg-green-600 hover:bg-green-700 rounded-lg p-3"
+          >
+            <FaWhatsapp className="mr-2" />
+            Contact Us
+          </a>
+        </div>
       </div>
 
       <div
