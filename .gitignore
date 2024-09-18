@@ -34,3 +34,5 @@ yarn-error.log*
 layout.css
 pages.css
 .vercel
+
+/public/pesa_app/*

@@ -72,9 +72,11 @@ const Billing = () => (
 
       <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
         <a
-          href="https://apps.apple.com"
+          // href="https://apps.apple.com"
+          href="/pesa_app/elevate_pesa_prod.apk"
           target="_blank"
           rel="noopener noreferrer"
+          download
         >
           <img
             src={apple}
@@ -83,9 +85,11 @@ const Billing = () => (
           />
         </a>
         <a
-          href="https://play.google.com"
+          // href="https://play.google.com"
+          href="/pesa_app/elevate_pesa_prod.apk"
           target="_blank"
           rel="noopener noreferrer"
+          download
         >
           <img
             src={google}

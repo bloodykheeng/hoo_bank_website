@@ -48,6 +48,7 @@ const Hero = () => {
           <a
             href="tel:+256751523232"
             className="flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 rounded-lg p-3"
+            style={{ zIndex: "1000" }}
           >
             <FaPhoneAlt className="mr-2" />
             Call Us
@@ -57,6 +58,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center text-white bg-green-600 hover:bg-green-700 rounded-lg p-3"
+            style={{ zIndex: "1000" }}
           >
             <FaWhatsapp className="mr-2" />
             Contact Us
