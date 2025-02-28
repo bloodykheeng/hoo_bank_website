@@ -1,44 +1,19 @@
-import styles from "./style";
-import {
-  Billing,
-  Business,
-  CardDeal,
-  Clients,
-  CTA,
-  Footer,
-  Navbar,
-  Stats,
-  Testimonials,
-  Hero,
-} from "./components";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import Home from "./Home";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import NotFound from "./components/NotFound";
 
 const App = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
-
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-      </div>
-    </div>
-
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        {/* <Stats /> */}
-        <Business />
-        <Billing />
-        {/* <CardDeal /> */}
-        {/* <Testimonials /> */}
-        {/* <Clients /> */}
-        {/* <CTA /> */}
-        <Footer />
-      </div>
-    </div>
-  </div>
+  <>
+    <Router>
+      <Routes>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  </>
 );
 
 export default App;

@@ -6,10 +6,12 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
-  FaWhatsapp,
+  FaWhatsapp
 } from "react-icons/fa";
 
 import PesaLogo from "../assets/elevate-pesa/pesa_with_green_bg.jpg";
+
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
@@ -61,7 +63,10 @@ const Footer = () => (
     <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-2 border-gray-700">
       <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
         Copyright &copy; {new Date().getFullYear()} Elevate Pesa. All Rights
-        Reserved.
+        Reserved.{" "}
+        <Link to="/privacy-policy" className="text-blue-400 underline">
+          Privacy Policy
+        </Link>
       </p>
       <div className="flex flex-row md:mt-0 mt-6">
         {socialMedia.map((social, index) => (
