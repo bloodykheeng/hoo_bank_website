@@ -1,79 +1,44 @@
-# HooBank - Fully Responsive Website
+# Elevate Pesa landing site
 
-![HooBank Screenshot](https://res.cloudinary.com/duxego3ja/image/upload/v1715775216/hoobank/l0kzbmi7enyqky9al34u.png)
+The public site on `https://elevatepesa.com`: what Elevate Pesa delivers, how ordering and pay later work, the
+Android app download, and contacts. React 18, Vite 5, Tailwind 3. Redesigned 2026-11-15 (it began as the "HooBank"
+template).
 
-## Description
-HooBank is a fully responsive website built with modern UI/UX principles using React JS (Vite) and Tailwind CSS. The website features a stunning hero section, high-quality assets and gradients, business stats, reusable feature sections with call-to-action buttons, testimonials, and more.
+## Run and build
 
-## Features
-- **Responsive Design**: Adapts seamlessly to different screen sizes and devices.
-- **Modern UI/UX**: Aesthetically pleasing design with a focus on user experience.
-- **Reusable Components**: Easily reusable and maintainable React components.
-- **High-Quality Assets**: Use of high-resolution images and smooth gradients.
-- **Business Stats**: Display important business statistics in an engaging way.
-- **Feature Sections**: Highlight features with call-to-action buttons.
-- **Testimonials**: Showcase customer testimonials.
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # dist/, uploaded to the server (workspace docs/redeployment.md)
+```
 
-## Design
-Check out the original design on Figma: [HooBank Figma Design](https://www.figma.com/design/bUGIPys15E78w9bs1l4tgS/HooBank?node-id=310-485&t=SDu6FiBxvEGgt0vg-0)
+## Where things are
 
-## Preview
-See the live preview here: [HooBank Live Preview](https://modern-hoobank-vite.netlify.app/)
+| What | File |
+| --- | --- |
+| Phone, WhatsApp, place, the app file, services, steps | `src/content.js` |
+| Colours (the admin dashboard's, light and dark) | `src/index.css` (CSS variables), `tailwind.config.js` |
+| Light/dark: the visitor's choice, else the phone's | `index.html` (before paint), `src/theme.js` |
+| Page sections | `src/site/` (`Hero`, `OrderTicket`, `Sections`, `Header`, `Footer`) |
+| Privacy policy (the app's store listing links here; keep `/privacy-policy`) | `src/components/PrivacyPolicy.jsx` |
 
-## Getting Started
-To get a local copy up and running, follow these simple steps.
+Fonts: Bricolage Grotesque (headings), Figtree (text), JetBrains Mono (order numbers, money), from Google Fonts.
 
-### Prerequisites
-- Node.js
-- npm or yarn
+The Android app is `public/pesa_app/elevate_pesa_prod.apk`: git-ignored (41 MB) and kept on the server between
+deploys, so never delete `pesa_app/` there.
 
-### Installation
-1. Clone the repo
-   ```sh
-   git clone https://github.com/ayoubhayda/hooBank-Responsive-Website.git
+## Photos
 
-2. Install NPM packages
-   ```sh
-   npm install
-  
-3. Usage
-   ```sh
-   npm run dev
+Free under the [Pexels licence](https://www.pexels.com/license/) (no attribution required), resized to WebP in
+`src/assets/photos/`:
 
-## Contributing
+| File | Pexels photo |
+| --- | --- |
+| `rider-delivery.webp` | 30661401, Motorcycle delivery in Nairobi street scene |
+| `rider-fuel.webp` | 30661393, Motorcyclist in Nairobi street scene |
+| `gas-flame.webp` | 6126281, Close-up of a blue flame on a gas burner |
+| `water-bottles.webp` | 11860560, Bottles of water |
+| `package-handover.webp` | 6995144, A delivery man handing packages |
+| `customer-phone.webp` | 30677594, Smiling woman with smartphone in Lagos |
 
-Contributions are what make the open source community such an amazing place to be, learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Ayoub Hayda - [ayoubhayda01@gmail.com](mailto:ayoubhayda01@gmail.com)
-
-Project Link: [https://github.com/ayoubhayda/hooBank-Responsive-Website](https://github.com/ayoubhayda/hooBank-Responsive-Website)
-
-## Keywords
-- React JS
-- Vite
-- Tailwind CSS
-- Responsive Design
-- Modern UI/UX
-- Web Development
-- Frontend Development
-
-## Tags
-- React
-- Tailwind
-- Responsive
-- UI/UX
-- Web Design
-- Frontend
-- Vite
+`app-home.webp` and `app-send.webp` are screenshots of the Elevate Pesa app.

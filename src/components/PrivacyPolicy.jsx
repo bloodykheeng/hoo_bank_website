@@ -1,5 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Header from "../site/Header";
+import Footer from "../site/Footer";
 
 const privacyContent = `
 PRIVACY POLICY STATEMENT
@@ -76,66 +77,21 @@ By consenting to this Privacy Policy, you agree that we may process or store you
 6.3. Where applicable, we shall request such third-party service providers to comply with  our privacy policies if they require access to any Personal
 `;
 
-const styles = {
-  container: {
-    maxWidth: "100%",
-    // margin: "50px auto",
-    padding: "20px",
-    backgroundColor: "#1a1a2e",
-    color: "white",
-    // borderRadius: "8px",
-    boxShadow: "0px 4px 10px rgba(255, 255, 255, 0.1)",
-    fontFamily: "'Poppins', sans-serif",
-    lineHeight: "1.6"
-  },
-  title: {
-    fontSize: "2.5rem",
-    fontWeight: "bold",
-    marginBottom: "15px",
-    color: "#ff4757",
-    textAlign: "center"
-  },
-  paragraph: {
-    fontSize: "1.1rem",
-    marginBottom: "10px",
-    opacity: 0.9
-  },
-  content: {
-    whiteSpace: "pre-line" // Retains line breaks from the string
-  }
-};
-
+/** The policy text is unchanged (the app's store listing links here); only the page around it is new. */
 function PrivacyPolicy() {
-  const navigate = useNavigate();
-
-  const handleGoHome = () => {
-    navigate("/");
-  };
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>Privacy Policy</h1>
-      <div style={styles.content}>{privacyContent}</div>
-      <center>
-        <button
-          onClick={handleGoHome}
-          style={{
-            backgroundColor: "#ff4757",
-            color: "white",
-            border: "none",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            cursor: "pointer",
-            fontSize: "16px",
-            marginTop: "20px",
-            display: "block",
-            maxWidth: "100%"
-          }}
-        >
-          Go Back to Home
-        </button>
-      </center>
-    </div>
+    <>
+      <Header sections={false} />
+      <main className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+        <p className="eyebrow">Elevate Pesa</p>
+        <h1 className="mt-3 text-[clamp(2.2rem,5vw,3.4rem)] font-extrabold leading-tight">Privacy policy</h1>
+        <article className="mt-8 whitespace-pre-line rounded-3xl border border-line bg-card p-6 text-[15px] leading-relaxed text-muted sm:p-10">
+          {privacyContent.trim()}
+        </article>
+        <Link to="/" className="btn-ghost mt-8">Back to the home page</Link>
+      </main>
+      <Footer />
+    </>
   );
 }
 

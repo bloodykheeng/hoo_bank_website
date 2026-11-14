@@ -1,46 +1,23 @@
-import styles from "./style";
-
-import {
-  Billing,
-  Business,
-  CardDeal,
-  Clients,
-  CTA,
-  Footer,
-  Navbar,
-  Stats,
-  Testimonials,
-  Hero
-} from "./components";
+import Header from "./site/Header";
+import Hero from "./site/Hero";
+import { Services, Steps, PayLater, TheApp, Contact } from "./site/Sections";
+import Footer from "./site/Footer";
 
 const Home = () => (
   <>
-    <div className="bg-primary w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-      </div>
-
-      <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero />
-        </div>
-      </div>
-
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          {/* <Stats /> */}
-          <Business />
-          <Billing />
-          {/* <CardDeal /> */}
-          {/* <Testimonials /> */}
-          {/* <Clients /> */}
-          {/* <CTA /> */}
-          <Footer />
-        </div>
-      </div>
-    </div>
+    <a href="#services" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-white">
+      Skip to content
+    </a>
+    <Header />
+    <main>
+      <Hero />
+      <Services />
+      <Steps />
+      <PayLater />
+      <TheApp />
+      <Contact />
+    </main>
+    <Footer />
   </>
 );
 

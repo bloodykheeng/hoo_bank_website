@@ -1,66 +1,17 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
-const styles = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100vh",
-    backgroundColor: "#1a1a2e",
-    color: "white",
-    textAlign: "center",
-    padding: "20px"
-  },
-  title: {
-    fontSize: "3rem",
-    fontWeight: "bold",
-    marginBottom: "10px",
-    color: "#ff4757"
-  },
-  text: {
-    fontSize: "1.2rem",
-    marginBottom: "20px",
-    opacity: 0.8
-  },
-  link: {
-    backgroundColor: "#007bff",
-    color: "white",
-    padding: "12px 24px",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontSize: "1rem",
-    fontWeight: "bold",
-    transition: "background 0.3s ease-in-out",
-    display: "inline-block"
-  },
-  linkHover: {
-    backgroundColor: "#0056b3"
-  }
-};
+import Header from "../site/Header";
 
 function NotFound() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>404 - Page Not Found</h1>
-      <p style={styles.text}>
-        Oops! The page you are looking for does not exist.
-      </p>
-      <Link
-        to="/"
-        style={styles.link}
-        onMouseOver={(e) =>
-          (e.currentTarget.style.backgroundColor =
-            styles.linkHover.backgroundColor)
-        }
-        onMouseOut={(e) =>
-          (e.currentTarget.style.backgroundColor = styles.link.backgroundColor)
-        }
-      >
-        ⬅ Go Back Home
-      </Link>
-    </div>
+    <>
+      <Header sections={false} />
+      <main className="mx-auto flex min-h-[70vh] max-w-xl flex-col items-center justify-center px-4 text-center">
+        <p className="font-mono text-sm font-semibold text-brand-ink">404</p>
+        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">This page is not here</h1>
+        <p className="mt-4 text-lg text-muted">The address may be mistyped, or the page has moved.</p>
+        <Link to="/" className="btn-brand mt-8">Go to the home page</Link>
+      </main>
+    </>
   );
 }
 
