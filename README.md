@@ -18,8 +18,8 @@ npm run build    # dist/, uploaded to the server (workspace docs/redeployment.md
 | --- | --- |
 | Phone, WhatsApp, place, the app file, services, steps | `src/content.js` |
 | Colours (the admin dashboard's, light and dark) | `src/index.css` (CSS variables), `tailwind.config.js` |
-| Light/dark: the visitor's choice, else the phone's | `index.html` (before paint), `src/theme.js` |
-| Page sections | `src/site/` (`Hero`, `OrderTicket`, `Sections`, `Header`, `Footer`) |
+| Light by default; dark when the visitor picks it (remembered) | `index.html` (before paint), `src/theme.js` |
+| Page sections | `src/site/` (`Hero`, `OrderTicket`, `Sections`, `Header`, `Footer`, `ScrollTop`: back-to-top button, new pages open at the top) |
 | Privacy policy (the app's store listing links here; keep `/privacy-policy`) | `src/components/PrivacyPolicy.jsx` |
 
 Fonts: Bricolage Grotesque (headings), Figtree (text), JetBrains Mono (order numbers, money), from Google Fonts.
@@ -34,8 +34,8 @@ Free under the [Pexels licence](https://www.pexels.com/license/) (no attribution
 
 | File | Pexels photo |
 | --- | --- |
-| `rider-delivery.webp` | 30661401, Motorcycle delivery in Nairobi street scene |
-| `rider-fuel.webp` | 30661393, Motorcyclist in Nairobi street scene |
+| `rider-delivery.webp` | 6867941, Man in orange shirt riding on a motorbike making a delivery |
+| `rider-fuel.webp` | 7362948, Man with food delivery bag riding a motorcycle |
 | `gas-flame.webp` | 6126281, Close-up of a blue flame on a gas burner |
 | `water-bottles.webp` | 11860560, Bottles of water |
 | `package-handover.webp` | 6995144, A delivery man handing packages |

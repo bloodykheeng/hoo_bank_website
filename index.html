@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elevate Pesa · Gas, water and more delivered in Kampala</title>
   <meta name="description" content="Order cooking gas, drinking water and accessories in the Elevate Pesa app, send packages, and pay at once or in instalments. Delivered to your door in Kampala." />
-  <meta name="theme-color" content="#f4f7f5" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0b1210" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f7f5" />
   <meta property="og:title" content="Elevate Pesa" />
   <meta property="og:description" content="Gas, water and more, at your door in Kampala. Pay now or in instalments." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -16,10 +15,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <script>
-    // The saved theme, else the phone's setting, before the first paint (no white flash in dark mode).
+    // Light by default; dark only when the visitor chose it (applied before the first paint, no flash).
     try {
-      var t = localStorage.getItem("ep-theme");
-      if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark");
+      if (localStorage.getItem("ep-theme") === "dark") document.documentElement.classList.add("dark");
     } catch (e) {}
   </script>
 </head>

@@ -46,11 +46,11 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] border border-line shadow-[0_40px_90px_-40px_rgba(6,78,59,.6)]">
             <img
               src={rider}
-              alt="A delivery rider carrying an order box on a motorcycle"
+              alt="A courier on his motorbike with a delivery box, checking a parcel"
               width="1400"
-              height="1051"
+              height="788"
               fetchpriority="high"
-              className="aspect-[4/4.4] w-full object-cover object-[60%_center] sm:aspect-[4/3.6]"
+              className="aspect-[4/4.4] w-full object-cover object-[30%_center] sm:aspect-[4/3.6]"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-deep/45 via-transparent to-transparent" />
           </div>

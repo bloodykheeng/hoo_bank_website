@@ -46,7 +46,7 @@ export const SERVICES = [
     title: "Fuel financing",
     text: "Fuel now, paid back over time, for riders and small businesses that keep moving.",
     photo: riderFuel,
-    alt: "A delivery rider on a motorcycle in city traffic",
+    alt: "A rider with a delivery box on his scooter in the city",
   },
 ];
 
