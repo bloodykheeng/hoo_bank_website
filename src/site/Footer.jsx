@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { Brand } from "./Header";
-import { NAV, PHONE, PHONE_LINK, WHATSAPP_LINK, PLACE } from "../content";
+import { NAV, ORDER_LINES, OFFICE, WHATSAPP_LINK, PLACE } from "../content";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-page gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Brand />
-          <p className="mt-4 max-w-xs leading-relaxed text-muted">Gas, water and more, delivered to your door in Kampala. Pay now or in instalments.</p>
+          <p className="mt-4 max-w-xs leading-relaxed text-muted">Elevate Pesa gas, Shell, Total and other brands, and fuel, delivered in Kampala. Pay now or in instalments.</p>
         </div>
         <div>
           <p className="text-sm font-semibold text-ink">On this page</p>
@@ -22,7 +22,10 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold text-ink">Reach us</p>
           <ul className="mt-3 space-y-2 text-muted">
-            <li><a href={PHONE_LINK} className="font-mono hover:text-brand-ink">{PHONE}</a></li>
+            {ORDER_LINES.map((l) => (
+              <li key={l.link}><a href={l.link} className="font-mono hover:text-brand-ink">{l.label}</a> <span className="text-faint">orders</span></li>
+            ))}
+            <li><a href={OFFICE.link} className="font-mono hover:text-brand-ink">{OFFICE.label}</a> <span className="text-faint">office</span></li>
             <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-brand-ink"><FaWhatsapp aria-hidden /> WhatsApp</a></li>
             <li>{PLACE}</li>
           </ul>

@@ -1,6 +1,6 @@
 import Header from "./site/Header";
 import Hero from "./site/Hero";
-import { Services, Steps, PayLater, TheApp, Contact } from "./site/Sections";
+import { Services, Prices, Offers, Steps, PayLater, TheApp, Contact } from "./site/Sections";
 import Footer from "./site/Footer";
 
 const Home = () => (
@@ -12,6 +12,8 @@ const Home = () => (
     <main>
       <Hero />
       <Services />
+      <Prices />
+      <Offers />
       <Steps />
       <PayLater />
       <TheApp />

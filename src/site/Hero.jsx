@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdDownload, MdCall } from "react-icons/md";
 import rider from "../assets/photos/rider-delivery.webp";
 import OrderTicket from "./OrderTicket";
-import { APK_LINK, WHATSAPP_LINK, PHONE, PHONE_LINK } from "../content";
+import { APK_LINK, WHATSAPP_LINK, ORDER_LINES } from "../content";
 
 export default function Hero() {
   return (
@@ -15,8 +15,7 @@ export default function Hero() {
         <div className="animate-rise">
           <p className="eyebrow">Delivered across Kampala</p>
           <h1 className="mt-4 text-[clamp(2.6rem,7vw,5.1rem)] font-extrabold leading-[0.98]">
-            Gas, water <br className="hidden sm:block" />
-            and more,{" "}
+            Gas and fuel,{" "}<br className="hidden sm:block" />
             <span className="relative whitespace-nowrap text-brand-ink">
               at your door.
               <svg aria-hidden viewBox="0 0 300 14" preserveAspectRatio="none" className="absolute -bottom-2 left-0 h-3 w-full text-amber">
@@ -25,8 +24,8 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-7 max-w-[34rem] text-lg leading-relaxed text-muted">
-            Order cooking gas, drinking water and accessories in the Elevate Pesa app, or send a package across town.
-            Pay at once, or take it today and pay in instalments.
+            Order Elevate Pesa gas, Shell, Total and other brands, or fuel, in the Elevate Pesa app. Pay at once, or
+            take it today and pay in instalments.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={APK_LINK} download className="btn-brand">
@@ -36,9 +35,14 @@ export default function Hero() {
               <FaWhatsapp className="text-lg text-[#25D366]" aria-hidden /> Order on WhatsApp
             </a>
           </div>
-          <p className="mt-5 flex items-center gap-2 text-[15px] text-faint">
-            <MdCall aria-hidden className="text-brand-ink" /> Or call us on{" "}
-            <a href={PHONE_LINK} className="font-mono font-semibold text-ink hover:text-brand-ink">{PHONE}</a>
+          <p className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[15px] text-faint">
+            <MdCall aria-hidden className="shrink-0 text-brand-ink" /> Order by phone:{" "}
+            {ORDER_LINES.map((l, i) => (
+              <span key={l.link}>
+                {i > 0 && <span className="mr-2 text-faint">·</span>}
+                <a href={l.link} className="font-mono font-semibold text-ink hover:text-brand-ink">{l.label}</a>
+              </span>
+            ))}
           </p>
         </div>
 

@@ -28,7 +28,7 @@ export default function OrderTicket({ className = "" }) {
   return (
     <div
       className={`w-[min(20rem,calc(100vw-3rem))] rounded-3xl border border-line bg-card/95 p-5 shadow-[0_30px_70px_-30px_rgba(6,78,59,.55)] backdrop-blur ${className}`}
-      aria-label="Example order: 13 kg gas refill and two 20 litre water jars, delivered to Bukoto"
+      aria-label="Example order: a 6 kg Elevate Pesa gas full set, delivered to Bukoto"
       role="img"
     >
       <div className="flex items-center justify-between">
@@ -41,7 +41,7 @@ export default function OrderTicket({ className = "" }) {
           {done ? "Delivered" : "Live"}
         </span>
       </div>
-      <p className="mt-1 text-[13px] text-faint">13 kg gas refill · 2 × 20 L water</p>
+      <p className="mt-1 text-[13px] text-faint">6 kg Elevate Pesa gas · full set</p>
 
       <ol className="mt-4 space-y-0">
         {STAGES.map((s, i) => {
